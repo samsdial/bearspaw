@@ -9,33 +9,33 @@ import natureTrail from '@/assets/nature-trail.jpg';
 const programs = [
   {
     icon: Dumbbell,
-    title: 'Yoga y Ejercicio',
-    description: 'Clases de yoga adaptadas, ejercicios de equilibrio, tai chi y caminatas guiadas diseñadas para todos los niveles de movilidad.',
+    title: 'Yoga and Exercise',
+    description: 'Adapted yoga classes, balance training, tai chi, and guided walks designed for all mobility levels.',
   },
   {
     icon: Sparkles,
-    title: 'Servicios de Spa',
-    description: 'Tratamientos relajantes incluyendo masajes terapéuticos, manicura, pedicura y cuidado personal de primera calidad.',
+    title: 'Spa Services',
+    description: 'Relaxing treatments including therapeutic massage, manicures, pedicures, and premium personal care.',
   },
   {
     icon: Palette,
-    title: 'Arte Terapéutico',
-    description: 'Talleres de pintura, escultura, manualidades y escritura creativa que estimulan la expresión artística y la creatividad.',
+    title: 'Therapeutic Art',
+    description: 'Painting, sculpture, crafts, and creative writing workshops that inspire expression and creativity.',
   },
   {
     icon: Music,
-    title: 'Terapia Musical',
-    description: 'Sesiones de música en vivo, canto coral, percusión rítmica y escucha guiada que despiertan recuerdos y emociones positivas.',
+    title: 'Music Therapy',
+    description: 'Live music, choral singing, rhythmic percussion, and guided listening that spark memories and positive emotions.',
   },
   {
     icon: Leaf,
-    title: 'Mindfulness y Meditación',
-    description: 'Prácticas de atención plena, respiración guiada y meditación que promueven la calma interior y el bienestar emocional.',
+    title: 'Mindfulness and Meditation',
+    description: 'Mindfulness practices, guided breathing, and meditation that promote inner calm and emotional wellbeing.',
   },
   {
     icon: Heart,
-    title: 'Nutrición Integral',
-    description: 'Asesoramiento nutricional personalizado y talleres de cocina saludable para mantener una alimentación equilibrada y placentera.',
+    title: 'Holistic Nutrition',
+    description: 'Personalized nutritional guidance and healthy cooking workshops to support balanced, enjoyable eating habits.',
   },
 ];
 
@@ -49,7 +49,7 @@ const WellnessPrograms = () => {
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <Link to="/" className="inline-flex items-center gap-2 font-sans text-sm text-muted-foreground hover:text-primary transition-colors mb-8">
               <ArrowLeft className="w-4 h-4" />
-              Volver al Inicio
+              Back to Home
             </Link>
           </motion.div>
 
@@ -57,18 +57,18 @@ const WellnessPrograms = () => {
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
               <span className="font-sans text-sm font-medium text-primary uppercase tracking-wider">Wellness Programs</span>
               <h1 className="heading-xl mt-4 mb-6">
-                Bienestar para <span className="text-primary">Cuerpo y Alma</span>
+                Wellness for <span className="text-primary">Body and Soul</span>
               </h1>
               <p className="body-lg mb-8">
-                Nuestros programas de bienestar holístico están diseñados para nutrir el cuerpo, estimular la mente y elevar el espíritu de cada residente.
+                Our holistic wellness programs are designed to nourish the body, stimulate the mind, and uplift the spirit of every resident.
               </p>
-              <Link to="/contacto" className="btn-primary inline-block">
-                Descubre Nuestros Programas
+              <Link to="/contact" className="btn-primary inline-block">
+                Discover Our Programs
               </Link>
             </motion.div>
 
             <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.7, delay: 0.2 }} className="relative rounded-[20px] overflow-hidden shadow-elevated">
-              <img src={wellnessRoom} alt="Sala de wellness en Bearspaw" className="w-full h-[400px] lg:h-[500px] object-cover" />
+              <img src={wellnessRoom} alt="Wellness space at Bearspaw" className="w-full h-[400px] lg:h-[500px] object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-foreground/20 to-transparent" />
             </motion.div>
           </div>
@@ -79,9 +79,9 @@ const WellnessPrograms = () => {
         <div className="container-wide">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="text-center max-w-2xl mx-auto mb-16">
             <h2 className="heading-lg mb-6">
-              Nuestros <span className="text-primary">Programas</span>
+              Our <span className="text-primary">Programs</span>
             </h2>
-            <p className="body-lg">Una variedad completa de actividades y terapias para mantener la vitalidad y el bienestar en cada etapa de la vida.</p>
+            <p className="body-lg">A complete range of activities and therapies to support vitality and wellbeing at every stage of life.</p>
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -102,20 +102,20 @@ const WellnessPrograms = () => {
         <div className="container-wide">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="rounded-[20px] overflow-hidden shadow-card">
-              <img src={natureTrail} alt="Actividades al aire libre" className="w-full h-[350px] object-cover" />
+              <img src={natureTrail} alt="Outdoor wellness activities" className="w-full h-[350px] object-cover" />
             </motion.div>
             <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-              <h2 className="heading-lg mb-6">Horario <span className="text-primary">Semanal</span></h2>
-              <p className="body-md mb-6">Una programación variada que ofrece algo especial cada día de la semana.</p>
+              <h2 className="heading-lg mb-6">Weekly <span className="text-primary">Schedule</span></h2>
+              <p className="body-md mb-6">A varied schedule that offers something special every day of the week.</p>
               <ul className="space-y-3 mb-8">
                 {[
-                  'Lunes: Yoga suave y meditación matutina',
-                  'Martes: Taller de arte y pintura',
-                  'Miércoles: Música en vivo y canto coral',
-                  'Jueves: Terapia de jardinería',
-                  'Viernes: Spa y cuidado personal',
-                  'Sábado: Actividades sociales y juegos',
-                  'Domingo: Caminatas y contemplación',
+                  'Monday: Gentle yoga and morning meditation',
+                  'Tuesday: Art and painting workshop',
+                  'Wednesday: Live music and choir',
+                  'Thursday: Gardening therapy',
+                  'Friday: Spa and personal care',
+                  'Saturday: Social activities and games',
+                  'Sunday: Walks and reflection',
                 ].map((item) => (
                   <li key={item} className="flex items-center gap-3 font-sans text-foreground">
                     <span className="w-2 h-2 bg-primary rounded-full flex-shrink-0" />
@@ -123,7 +123,7 @@ const WellnessPrograms = () => {
                   </li>
                 ))}
               </ul>
-              <Link to="/contacto" className="btn-outline inline-block">Conoce Más</Link>
+              <Link to="/contact" className="btn-outline inline-block">Learn More</Link>
             </motion.div>
           </div>
         </div>

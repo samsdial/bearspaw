@@ -8,37 +8,37 @@ import commonRoom from '@/assets/common-room.jpg';
 const features = [
   {
     icon: Lock,
-    title: 'Acceso Controlado',
-    description: 'Sistemas de entrada seguros con tecnología de última generación que garantizan la protección de todos nuestros residentes sin sacrificar la calidez del hogar.',
+    title: 'Controlled Access',
+    description: 'Secure entry systems with modern technology that protect residents while preserving a warm, welcoming environment.',
   },
   {
     icon: Eye,
-    title: 'Monitoreo 24/7',
-    description: 'Personal de vigilancia capacitado las 24 horas del día, los 7 días de la semana, con protocolos de respuesta rápida ante cualquier situación.',
+    title: '24/7 Monitoring',
+    description: 'Trained staff available around the clock with rapid-response protocols for any situation.',
   },
   {
     icon: Bell,
-    title: 'Sistema de Alertas',
-    description: 'Cada habitación cuenta con sistema de llamada de emergencia conectado directamente con nuestro equipo de cuidado profesional.',
+    title: 'Emergency Alert System',
+    description: 'Each room includes an emergency call system connected directly to our professional care team.',
   },
   {
     icon: HeartPulse,
-    title: 'Atención Médica',
-    description: 'Enfermeras registradas disponibles en todo momento, con planes de cuidado individualizados y seguimiento médico continuo.',
+    title: 'Medical Support',
+    description: 'Registered nurses available at all times, with individualized care plans and ongoing medical follow-up.',
   },
   {
     icon: Users,
-    title: 'Personal Capacitado',
-    description: 'Nuestro equipo recibe formación continua en protocolos de seguridad, primeros auxilios y manejo de situaciones de emergencia.',
+    title: 'Trained Staff',
+    description: 'Our team receives ongoing training in safety protocols, first aid, and emergency response.',
   },
   {
     icon: Shield,
-    title: 'Protocolos de Seguridad',
-    description: 'Planes de evacuación, simulacros regulares y coordinación con servicios de emergencia locales para máxima protección.',
+    title: 'Safety Protocols',
+    description: 'Evacuation plans, regular drills, and coordination with local emergency services for maximum protection.',
   },
 ];
 
-const Seguridad = () => {
+const Safety = () => {
   return (
     <main className="min-h-screen bg-background">
       <Navbar />
@@ -48,26 +48,26 @@ const Seguridad = () => {
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <Link to="/" className="inline-flex items-center gap-2 font-sans text-sm text-muted-foreground hover:text-primary transition-colors mb-8">
               <ArrowLeft className="w-4 h-4" />
-              Volver al Inicio
+              Back to Home
             </Link>
           </motion.div>
 
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
-              <span className="font-sans text-sm font-medium text-primary uppercase tracking-wider">Seguridad</span>
+              <span className="font-sans text-sm font-medium text-primary uppercase tracking-wider">Safety</span>
               <h1 className="heading-xl mt-4 mb-6">
-                Protección y <span className="text-primary">Tranquilidad</span>
+                Protection and <span className="text-primary">Peace of Mind</span>
               </h1>
               <p className="body-lg mb-8">
-                En Bearspaw, la seguridad de nuestros residentes es nuestra máxima prioridad. Combinamos tecnología avanzada con atención humana dedicada para crear un entorno donde todos se sienten protegidos y en paz.
+                At Bearspaw, resident safety is our highest priority. We combine advanced technology with dedicated human care to create an environment where everyone feels protected and at ease.
               </p>
-              <Link to="/contacto" className="btn-primary inline-block">
-                Conoce Nuestros Protocolos
+              <Link to="/contact" className="btn-primary inline-block">
+                Learn About Our Protocols
               </Link>
             </motion.div>
 
             <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.7, delay: 0.2 }} className="relative rounded-[20px] overflow-hidden shadow-elevated">
-              <img src={commonRoom} alt="Área común segura en Bearspaw" className="w-full h-[400px] lg:h-[500px] object-cover" />
+              <img src={commonRoom} alt="Safe common area at Bearspaw" className="w-full h-[400px] lg:h-[500px] object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-foreground/20 to-transparent" />
             </motion.div>
           </div>
@@ -78,9 +78,9 @@ const Seguridad = () => {
         <div className="container-wide">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="text-center max-w-2xl mx-auto mb-16">
             <h2 className="heading-lg mb-6">
-              Nuestro Compromiso con la <span className="text-primary">Seguridad</span>
+              Our Commitment to <span className="text-primary">Safety</span>
             </h2>
-            <p className="body-lg">Cada detalle de nuestras instalaciones está diseñado pensando en la protección y el bienestar de quienes más importan.</p>
+            <p className="body-lg">Every detail of our community is designed with protection and wellbeing in mind.</p>
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -100,11 +100,11 @@ const Seguridad = () => {
       <section className="section-padding bg-card">
         <div className="container-narrow">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="text-center">
-            <h2 className="heading-lg mb-6">¿Deseas conocer más sobre nuestra <span className="text-primary">seguridad</span>?</h2>
-            <p className="body-lg mb-10">Agenda una visita y conoce de primera mano nuestras instalaciones y protocolos de seguridad.</p>
+            <h2 className="heading-lg mb-6">Want to learn more about our <span className="text-primary">safety</span>?</h2>
+            <p className="body-lg mb-10">Schedule a visit and experience our community and safety protocols firsthand.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="tel:+14035550123" className="btn-primary">Llamar (403) 555-0123</a>
-              <Link to="/contacto" className="btn-secondary">Enviar Consulta</Link>
+              <a href="tel:+14035550123" className="btn-primary">Call (403) 555-0123</a>
+              <Link to="/contact" className="btn-secondary">Send Inquiry</Link>
             </div>
           </motion.div>
         </div>
@@ -115,4 +115,4 @@ const Seguridad = () => {
   );
 };
 
-export default Seguridad;
+export default Safety;

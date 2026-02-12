@@ -5,92 +5,92 @@ import { Link } from 'react-router-dom';
 
 const navMenus = [
   {
-    name: 'Nuestra Filosofía',
-    href: '/seguridad',
+    name: 'Our Philosophy',
+    href: '/safety',
     isRoute: true,
     submenu: [
       {
-        title: 'Seguridad',
-        description: 'Protocolos de cuidado las 24 horas del día',
-        href: '/seguridad',
+        title: 'Safety',
+        description: '24/7 care and security protocols',
+        href: '/safety',
         isRoute: true,
         icon: Shield,
       },
       {
-        title: 'Naturaleza',
-        description: 'Entornos integrados con jardines terapéuticos',
-        href: '/naturaleza',
+        title: 'Nature',
+        description: 'Healing gardens and nature-integrated spaces',
+        href: '/nature',
         isRoute: true,
         icon: TreePine,
       },
       {
-        title: 'Legado',
-        description: 'Honramos cada historia de vida con dignidad',
-        href: '/legado',
+        title: 'Legacy',
+        description: "Honoring each resident's life story with dignity",
+        href: '/legacy',
         isRoute: true,
         icon: Heart,
       },
     ],
   },
   {
-    name: 'Servicios',
+    name: 'Services',
     href: '/assisted-living',
     isRoute: true,
     submenu: [
       {
         title: 'Assisted Living',
-        description: 'Soporte personalizado manteniendo la independencia',
+        description: 'Personalized support while maintaining independence',
         href: '/assisted-living',
         isRoute: true,
         icon: Home,
       },
       {
         title: 'Memory Care',
-        description: 'Programas especializados para Alzheimer y demencia',
+        description: "Specialized support for Alzheimer's and dementia",
         href: '/memory-care',
         isRoute: true,
         icon: Brain,
       },
       {
         title: 'Wellness Programs',
-        description: 'Yoga, spa, arte y terapia musical',
+        description: 'Yoga, spa, art, and music therapy',
         href: '/wellness-programs',
         isRoute: true,
         icon: Activity,
       },
       {
-        title: 'Actividades Sociales',
-        description: 'Eventos comunitarios y programas de conexión',
-        href: '/actividades-sociales',
+        title: 'Social Activities',
+        description: 'Community events and meaningful connections',
+        href: '/social-activities',
         isRoute: true,
         icon: Users,
       },
     ],
   },
   {
-    name: 'Experiencia',
-    href: '/testimonios',
+    name: 'Experience',
+    href: '/testimonials',
     isRoute: true,
     submenu: [
       {
-        title: 'Testimonios',
-        description: 'Lo que dicen las familias sobre nosotros',
-        href: '/testimonios',
+        title: 'Testimonials',
+        description: 'What families say about us',
+        href: '/testimonials',
         isRoute: true,
         icon: Sparkles,
       },
       {
-        title: 'Vida en Comunidad',
-        description: 'Descubre el día a día en Bearspaw',
-        href: '/vida-en-comunidad',
+        title: 'Community Life',
+        description: 'Discover everyday life at Bearspaw',
+        href: '/community-life',
         isRoute: true,
         icon: Leaf,
       },
     ],
   },
   {
-    name: 'Contacto',
-    href: '/contacto',
+    name: 'Contact',
+    href: '/contact',
     isRoute: true,
     submenu: null,
   },
@@ -212,7 +212,7 @@ const Navbar = () => {
               <Phone className="w-4 h-4" />
               <span className="font-sans text-sm">(403) 555-0123</span>
             </a>
-            <Link to="/contacto" className="btn-primary text-base py-3 px-6">
+            <Link to="/contact" className="btn-primary text-base py-3 px-6">
               Schedule a Tour
             </Link>
           </div>
@@ -310,7 +310,7 @@ const Navbar = () => {
               ))}
               <div className="pt-4 border-t border-border">
                 <Link
-                  to="/contacto"
+                  to="/contact"
                   onClick={() => setIsOpen(false)}
                   className="btn-primary block text-center"
                 >

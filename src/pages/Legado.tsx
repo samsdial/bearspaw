@@ -8,37 +8,37 @@ import wellnessRoom from '@/assets/wellness-room.jpg';
 const features = [
   {
     icon: BookOpen,
-    title: 'Historias de Vida',
-    description: 'Cada residente tiene una historia única. Documentamos y celebramos sus memorias, logros y experiencias de vida con dedicación.',
+    title: 'Life Stories',
+    description: 'Each resident has a unique story. We document and celebrate their memories, achievements, and life experiences with care.',
   },
   {
     icon: Camera,
-    title: 'Álbumes de Recuerdos',
-    description: 'Creamos álbumes fotográficos personalizados que capturan momentos especiales y celebraciones en la comunidad.',
+    title: 'Memory Albums',
+    description: 'We create personalized photo albums that capture special moments and celebrations in our community.',
   },
   {
     icon: Music,
-    title: 'Tradiciones Musicales',
-    description: 'La música de cada generación resuena en nuestros espacios, conectando a los residentes con sus recuerdos más preciados.',
+    title: 'Musical Traditions',
+    description: "Music from each generation fills our spaces, helping residents reconnect with treasured memories.",
   },
   {
     icon: Palette,
-    title: 'Arte y Expresión',
-    description: 'Talleres de arte donde los residentes pueden expresarse creativamente y dejar su huella artística personal.',
+    title: 'Art and Expression',
+    description: 'Art workshops where residents can express themselves creatively and leave a personal artistic legacy.',
   },
   {
     icon: Heart,
-    title: 'Conexión Familiar',
-    description: 'Eventos familiares regulares que fortalecen los lazos intergeneracionales y crean nuevos recuerdos compartidos.',
+    title: 'Family Connection',
+    description: 'Regular family events that strengthen intergenerational bonds and create new shared memories.',
   },
   {
     icon: Star,
-    title: 'Celebraciones Especiales',
-    description: 'Honramos cada cumpleaños, aniversario y logro personal con celebraciones significativas que reconocen la dignidad de cada vida.',
+    title: 'Special Celebrations',
+    description: 'We honor every birthday, anniversary, and personal milestone with meaningful celebrations.',
   },
 ];
 
-const Legado = () => {
+const Legacy = () => {
   return (
     <main className="min-h-screen bg-background">
       <Navbar />
@@ -48,26 +48,26 @@ const Legado = () => {
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <Link to="/" className="inline-flex items-center gap-2 font-sans text-sm text-muted-foreground hover:text-primary transition-colors mb-8">
               <ArrowLeft className="w-4 h-4" />
-              Volver al Inicio
+              Back to Home
             </Link>
           </motion.div>
 
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
-              <span className="font-sans text-sm font-medium text-primary uppercase tracking-wider">Legado</span>
+              <span className="font-sans text-sm font-medium text-primary uppercase tracking-wider">Legacy</span>
               <h1 className="heading-xl mt-4 mb-6">
-                Honramos Cada <span className="text-primary">Historia de Vida</span>
+                Honoring Every <span className="text-primary">Life Story</span>
               </h1>
               <p className="body-lg mb-8">
-                Cada persona que llega a Bearspaw trae consigo una vida llena de experiencias, logros y memorias. Nuestro compromiso es preservar y celebrar ese legado con dignidad y respeto.
+                Every person who arrives at Bearspaw brings a life full of experiences, achievements, and memories. Our commitment is to preserve and celebrate that legacy with dignity and respect.
               </p>
-              <Link to="/contacto" className="btn-primary inline-block">
-                Conoce Nuestra Filosofía
+              <Link to="/contact" className="btn-primary inline-block">
+                Explore Our Philosophy
               </Link>
             </motion.div>
 
             <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.7, delay: 0.2 }} className="relative rounded-[20px] overflow-hidden shadow-elevated">
-              <img src={wellnessRoom} alt="Espacio de convivencia en Bearspaw" className="w-full h-[400px] lg:h-[500px] object-cover" />
+              <img src={wellnessRoom} alt="Community living space at Bearspaw" className="w-full h-[400px] lg:h-[500px] object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-foreground/20 to-transparent" />
             </motion.div>
           </div>
@@ -78,9 +78,9 @@ const Legado = () => {
         <div className="container-wide">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="text-center max-w-2xl mx-auto mb-16">
             <h2 className="heading-lg mb-6">
-              Preservando <span className="text-primary">Dignidad</span>
+              Preserving <span className="text-primary">Dignity</span>
             </h2>
-            <p className="body-lg">Creemos que cada etapa de la vida merece ser vivida con propósito, conexión y celebración.</p>
+            <p className="body-lg">We believe every stage of life deserves to be lived with purpose, connection, and celebration.</p>
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -100,11 +100,11 @@ const Legado = () => {
       <section className="section-padding bg-card">
         <div className="container-narrow">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="text-center">
-            <h2 className="heading-lg mb-6">Comienza a Escribir un Nuevo <span className="text-primary">Capítulo</span></h2>
-            <p className="body-lg mb-10">Descubre cómo en Bearspaw honramos el legado de cada residente mientras creamos nuevas experiencias significativas.</p>
+            <h2 className="heading-lg mb-6">Begin Writing a New <span className="text-primary">Chapter</span></h2>
+            <p className="body-lg mb-10">Discover how Bearspaw honors each resident's legacy while creating meaningful new experiences.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="tel:+14035550123" className="btn-primary">Llamar (403) 555-0123</a>
-              <Link to="/contacto" className="btn-secondary">Enviar Consulta</Link>
+              <a href="tel:+14035550123" className="btn-primary">Call (403) 555-0123</a>
+              <Link to="/contact" className="btn-secondary">Send Inquiry</Link>
             </div>
           </motion.div>
         </div>
@@ -115,4 +115,4 @@ const Legado = () => {
   );
 };
 
-export default Legado;
+export default Legacy;

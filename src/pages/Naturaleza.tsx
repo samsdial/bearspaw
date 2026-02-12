@@ -9,37 +9,37 @@ import natureTrail from '@/assets/nature-trail.jpg';
 const features = [
   {
     icon: TreePine,
-    title: 'Jardines Terapéuticos',
-    description: 'Espacios verdes diseñados para estimular los sentidos y promover la relajación, con senderos accesibles y áreas de descanso.',
+    title: 'Therapeutic Gardens',
+    description: 'Green spaces designed to stimulate the senses and promote relaxation, with accessible paths and rest areas.',
   },
   {
     icon: Sun,
-    title: 'Terrazas al Aire Libre',
-    description: 'Terrazas soleadas con vistas a las montañas Rocosas donde nuestros residentes pueden disfrutar del aire fresco durante todo el año.',
+    title: 'Outdoor Terraces',
+    description: 'Sunny terraces with Rocky Mountain views where residents enjoy fresh air year-round.',
   },
   {
     icon: Flower2,
-    title: 'Programa de Jardinería',
-    description: 'Actividades de jardinería terapéutica donde los residentes pueden cultivar flores y hierbas, fomentando propósito y conexión con la tierra.',
+    title: 'Gardening Program',
+    description: 'Therapeutic gardening activities where residents grow flowers and herbs, fostering purpose and connection with nature.',
   },
   {
     icon: Bird,
-    title: 'Observación de Aves',
-    description: 'Estaciones de observación de aves y comederos estratégicamente ubicados para disfrutar de la fauna local desde la comodidad del hogar.',
+    title: 'Bird Watching',
+    description: 'Birdwatching stations and feeders thoughtfully placed to enjoy local wildlife from the comfort of home.',
   },
   {
     icon: Wind,
-    title: 'Senderos Naturales',
-    description: 'Caminos seguros y accesibles que serpentean a través de jardines nativos, perfectos para caminatas matutinas y meditación al aire libre.',
+    title: 'Nature Trails',
+    description: 'Safe, accessible pathways through native gardens, perfect for morning walks and outdoor meditation.',
   },
   {
     icon: Droplets,
-    title: 'Fuentes de Agua',
-    description: 'Fuentes y elementos acuáticos que crean un ambiente sonoro relajante, contribuyendo a la calma y serenidad del entorno.',
+    title: 'Water Features',
+    description: 'Fountains and water elements that create a calming soundscape and a serene atmosphere.',
   },
 ];
 
-const Naturaleza = () => {
+const Nature = () => {
   return (
     <main className="min-h-screen bg-background">
       <Navbar />
@@ -49,26 +49,26 @@ const Naturaleza = () => {
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <Link to="/" className="inline-flex items-center gap-2 font-sans text-sm text-muted-foreground hover:text-primary transition-colors mb-8">
               <ArrowLeft className="w-4 h-4" />
-              Volver al Inicio
+              Back to Home
             </Link>
           </motion.div>
 
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
-              <span className="font-sans text-sm font-medium text-primary uppercase tracking-wider">Naturaleza</span>
+              <span className="font-sans text-sm font-medium text-primary uppercase tracking-wider">Nature</span>
               <h1 className="heading-xl mt-4 mb-6">
-                Vivir en Armonía con la <span className="text-primary">Naturaleza</span>
+                Living in Harmony with <span className="text-primary">Nature</span>
               </h1>
               <p className="body-lg mb-8">
-                Bearspaw está ubicado en un entorno natural privilegiado al pie de las Montañas Rocosas. Nuestros espacios verdes y jardines terapéuticos ofrecen conexión con la naturaleza que nutre el alma.
+                Bearspaw is located in an exceptional natural setting at the base of the Rocky Mountains. Our green spaces and therapeutic gardens offer a meaningful connection to nature that nourishes the soul.
               </p>
-              <Link to="/contacto" className="btn-primary inline-block">
-                Visita Nuestros Jardines
+              <Link to="/contact" className="btn-primary inline-block">
+                Visit Our Gardens
               </Link>
             </motion.div>
 
             <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.7, delay: 0.2 }} className="relative rounded-[20px] overflow-hidden shadow-elevated">
-              <img src={heroGarden} alt="Jardines de Bearspaw Seniors Living" className="w-full h-[400px] lg:h-[500px] object-cover" />
+              <img src={heroGarden} alt="Gardens at Bearspaw Seniors Living" className="w-full h-[400px] lg:h-[500px] object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-foreground/20 to-transparent" />
             </motion.div>
           </div>
@@ -79,9 +79,9 @@ const Naturaleza = () => {
         <div className="container-wide">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="text-center max-w-2xl mx-auto mb-16">
             <h2 className="heading-lg mb-6">
-              Espacios que <span className="text-primary">Sanan</span>
+              Spaces That <span className="text-primary">Heal</span>
             </h2>
-            <p className="body-lg">La naturaleza tiene un poder sanador extraordinario. Integramos el entorno natural en cada aspecto de la vida en Bearspaw.</p>
+            <p className="body-lg">Nature has extraordinary healing power. We integrate the natural environment into every aspect of life at Bearspaw.</p>
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -102,20 +102,20 @@ const Naturaleza = () => {
         <div className="container-wide">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="rounded-[20px] overflow-hidden shadow-card">
-              <img src={natureTrail} alt="Sendero natural en Bearspaw" className="w-full h-[350px] object-cover" />
+              <img src={natureTrail} alt="Nature trail at Bearspaw" className="w-full h-[350px] object-cover" />
             </motion.div>
             <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-              <h2 className="heading-lg mb-6">Un Refugio <span className="text-primary">Natural</span></h2>
-              <p className="body-md mb-6">Nuestro campus de 5 acres incluye jardines terapéuticos, senderos naturales y áreas de contemplación diseñadas para promover el bienestar físico y emocional de cada residente.</p>
+              <h2 className="heading-lg mb-6">A Natural <span className="text-primary">Retreat</span></h2>
+              <p className="body-md mb-6">Our 5-acre campus includes therapeutic gardens, natural trails, and reflection areas designed to support each resident's physical and emotional wellbeing.</p>
               <ul className="space-y-3 mb-8">
-                {['5 acres de jardines y espacios verdes', 'Senderos accesibles con bancas de descanso', 'Jardín de hierbas aromáticas comunitario', 'Área de meditación al aire libre', 'Invernadero para actividades todo el año'].map((item) => (
+                {['5 acres of gardens and green spaces', 'Accessible pathways with resting benches', 'Community herb garden', 'Outdoor meditation area', 'Greenhouse for year-round activities'].map((item) => (
                   <li key={item} className="flex items-center gap-3 font-sans text-foreground">
                     <span className="w-2 h-2 bg-primary rounded-full flex-shrink-0" />
                     {item}
                   </li>
                 ))}
               </ul>
-              <Link to="/contacto" className="btn-outline inline-block">Agenda Tu Visita</Link>
+              <Link to="/contact" className="btn-outline inline-block">Schedule Your Visit</Link>
             </motion.div>
           </div>
         </div>
@@ -126,4 +126,4 @@ const Naturaleza = () => {
   );
 };
 
-export default Naturaleza;
+export default Nature;
