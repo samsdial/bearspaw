@@ -1,57 +1,65 @@
-import { motion } from 'framer-motion';
-import { ArrowLeft, Shield, Brain, Heart, Users, Clock, Leaf } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
-import natureTrail from '@/assets/nature-trail.jpg';
+import natureTrail from "@/assets/nature-trail.jpg";
+import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
+import { motion } from "framer-motion";
+import {
+  ArrowLeft,
+  Brain,
+  Clock,
+  Heart,
+  Leaf,
+  Shield,
+  Users,
+} from "lucide-react";
+import { Link } from "react-router-dom";
 
 const features = [
   {
     icon: Shield,
-    title: 'Secure Environment',
+    title: "Secure Environment",
     description:
-      'Our thoughtfully designed spaces include secure entry points and monitored outdoor gardens, allowing freedom of movement within a safe, protected setting.',
+      "Our thoughtfully designed spaces include secure entry points and monitored outdoor gardens, allowing freedom of movement within a safe, protected setting.",
   },
   {
     icon: Brain,
-    title: 'Cognitive Therapies',
+    title: "Cognitive Therapies",
     description:
-      'Evidence-based programs including reminiscence therapy, music therapy, and sensory stimulation designed to maintain cognitive function and spark joy.',
+      "Evidence-based programs including reminiscence therapy, music therapy, and sensory stimulation designed to maintain cognitive function and spark joy.",
   },
   {
     icon: Heart,
-    title: 'Person-Centered Care',
+    title: "Person-Centered Care",
     description:
       "Each resident receives a customized care plan that honors their life story, preferences, and routines — because every person's journey with dementia is unique.",
   },
   {
     icon: Users,
-    title: 'Family Support Programs',
+    title: "Family Support Programs",
     description:
-      'Regular family meetings, educational workshops, and support groups to help loved ones understand and navigate the journey alongside their family member.',
+      "Regular family meetings, educational workshops, and support groups to help loved ones understand and navigate the journey alongside their family member.",
   },
   {
     icon: Clock,
-    title: '24/7 Specialized Staff',
+    title: "24/7 Specialized Staff",
     description:
-      'Our team is specially trained in dementia care techniques, including de-escalation, validation therapy, and compassionate communication.',
+      "Our team is specially trained in dementia care techniques, including de-escalation, validation therapy, and compassionate communication.",
   },
   {
     icon: Leaf,
-    title: 'Therapeutic Gardens',
+    title: "Therapeutic Gardens",
     description:
-      'Beautifully designed sensory gardens provide calming outdoor spaces for walking, relaxation, and nature-based therapeutic activities.',
+      "Beautifully designed sensory gardens provide calming outdoor spaces for walking, relaxation, and nature-based therapeutic activities.",
   },
 ];
 
 const dailyActivities = [
-  'Morning wellness & gentle stretching',
-  'Music & art therapy sessions',
-  'Guided reminiscence groups',
-  'Nature walks in secure gardens',
-  'Sensory stimulation programs',
-  'Social dining experiences',
-  'Evening relaxation rituals',
+  "Morning wellness & gentle stretching",
+  "Music & art therapy sessions",
+  "Guided reminiscence groups",
+  "Nature walks in secure gardens",
+  "Sensory stimulation programs",
+  "Social dining experiences",
+  "Evening relaxation rituals",
 ];
 
 const MemoryCare = () => {
@@ -86,7 +94,7 @@ const MemoryCare = () => {
                 Memory Care
               </span>
               <h1 className="heading-xl mt-4 mb-6">
-                Compassionate Care for{' '}
+                Compassionate Care for{" "}
                 <span className="text-primary">Every Memory</span>
               </h1>
               <p className="body-lg mb-8">
@@ -123,7 +131,7 @@ const MemoryCare = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: '-100px' }}
+            viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
             className="text-center max-w-2xl mx-auto mb-16"
           >
@@ -147,7 +155,7 @@ const MemoryCare = () => {
                 key={feature.title}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: '-80px' }}
+                viewport={{ once: true, margin: "-80px" }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="card-elevated"
               >
@@ -173,7 +181,7 @@ const MemoryCare = () => {
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: '-100px' }}
+              viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6 }}
             >
               <span className="font-sans text-sm font-medium text-primary uppercase tracking-wider">
@@ -209,7 +217,7 @@ const MemoryCare = () => {
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: '-100px' }}
+              viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6 }}
               className="bg-background rounded-[20px] p-10 shadow-card"
             >
@@ -223,10 +231,10 @@ const MemoryCare = () => {
               </p>
               <ul className="space-y-3 mb-8">
                 {[
-                  'Regular family updates and open communication',
-                  'Flexible visiting hours and family participation',
-                  'Transparent care planning and progress sharing',
-                  'Monthly family education and support sessions',
+                  "Regular family updates and open communication",
+                  "Flexible visiting hours and family participation",
+                  "Transparent care planning and progress sharing",
+                  "Monthly family education and support sessions",
                 ].map((item) => (
                   <li
                     key={item}
@@ -251,7 +259,7 @@ const MemoryCare = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: '-100px' }}
+            viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
             className="text-center max-w-2xl mx-auto"
           >
@@ -264,7 +272,7 @@ const MemoryCare = () => {
               support your loved one deserves.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="tel:+14035550123" className="btn-primary">
+              <a href="tel:+14035897055" className="btn-primary">
                 Call (403) 555-0123
               </a>
               <Link to="/#contact" className="btn-secondary">

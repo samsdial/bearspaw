@@ -1,21 +1,25 @@
-import { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Send, Phone, MapPin, Mail } from 'lucide-react';
-import { useToast } from '@/hooks/use-toast';
+import { useToast } from "@/hooks/use-toast";
+import { motion } from "framer-motion";
+import { Mail, MapPin, Phone, Send } from "lucide-react";
+import { useState } from "react";
 
 const ContactForm = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    phone: '',
-    relation: '',
-    message: '',
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    relation: "",
+    message: "",
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >,
+  ) => {
     setFormData((prev) => ({
       ...prev,
       [e.target.name]: e.target.value,
@@ -25,22 +29,23 @@ const ContactForm = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Simulate form submission
     await new Promise((resolve) => setTimeout(resolve, 1000));
-    
+
     toast({
       title: "Tour Request Received",
-      description: "Our team will contact you within 24 hours to schedule your visit.",
+      description:
+        "Our team will contact you within 24 hours to schedule your visit.",
     });
-    
+
     setFormData({
-      firstName: '',
-      lastName: '',
-      email: '',
-      phone: '',
-      relation: '',
-      message: '',
+      firstName: "",
+      lastName: "",
+      email: "",
+      phone: "",
+      relation: "",
+      message: "",
     });
     setIsSubmitting(false);
   };
@@ -53,7 +58,7 @@ const ContactForm = () => {
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: '-100px' }}
+            viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
             className="space-y-8"
           >
@@ -62,8 +67,7 @@ const ContactForm = () => {
                 Get in Touch
               </span>
               <h2 className="heading-lg mt-4 mb-6">
-                Schedule a{' '}
-                <span className="text-primary">Personal Tour</span>
+                Schedule a <span className="text-primary">Personal Tour</span>
               </h2>
               <p className="body-lg">
                 We invite you and your family to experience Bearspaw firsthand.
@@ -79,8 +83,13 @@ const ContactForm = () => {
                   <Phone className="w-5 h-5 text-primary" />
                 </div>
                 <div>
-                  <p className="font-sans font-semibold text-foreground">Phone</p>
-                  <a href="tel:+14035550123" className="font-sans text-muted-foreground hover:text-primary transition-colors">
+                  <p className="font-sans font-semibold text-foreground">
+                    Phone
+                  </p>
+                  <a
+                    href="tel:+14035897055"
+                    className="font-sans text-muted-foreground hover:text-primary transition-colors"
+                  >
                     (403) 555-0123
                   </a>
                 </div>
@@ -91,8 +100,13 @@ const ContactForm = () => {
                   <Mail className="w-5 h-5 text-primary" />
                 </div>
                 <div>
-                  <p className="font-sans font-semibold text-foreground">Email</p>
-                  <a href="mailto:info@bearspawseniors.ca" className="font-sans text-muted-foreground hover:text-primary transition-colors">
+                  <p className="font-sans font-semibold text-foreground">
+                    Email
+                  </p>
+                  <a
+                    href="mailto:info@bearspawseniors.ca"
+                    className="font-sans text-muted-foreground hover:text-primary transition-colors"
+                  >
                     info@bearspawseniors.ca
                   </a>
                 </div>
@@ -103,9 +117,12 @@ const ContactForm = () => {
                   <MapPin className="w-5 h-5 text-primary" />
                 </div>
                 <div>
-                  <p className="font-sans font-semibold text-foreground">Location</p>
+                  <p className="font-sans font-semibold text-foreground">
+                    Location
+                  </p>
                   <p className="font-sans text-muted-foreground">
-                    123 Bearspaw Road NW<br />
+                    123 Bearspaw Road NW
+                    <br />
                     Calgary, AB T3L 2P5
                   </p>
                 </div>
@@ -131,14 +148,20 @@ const ContactForm = () => {
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: '-100px' }}
+            viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <form onSubmit={handleSubmit} className="bg-background rounded-[20px] p-8 md:p-10 shadow-card">
+            <form
+              onSubmit={handleSubmit}
+              className="bg-background rounded-[20px] p-8 md:p-10 shadow-card"
+            >
               <div className="grid sm:grid-cols-2 gap-6">
                 {/* First Name */}
                 <div>
-                  <label htmlFor="firstName" className="block font-sans text-sm font-medium text-foreground mb-2">
+                  <label
+                    htmlFor="firstName"
+                    className="block font-sans text-sm font-medium text-foreground mb-2"
+                  >
                     First Name *
                   </label>
                   <input
@@ -155,7 +178,10 @@ const ContactForm = () => {
 
                 {/* Last Name */}
                 <div>
-                  <label htmlFor="lastName" className="block font-sans text-sm font-medium text-foreground mb-2">
+                  <label
+                    htmlFor="lastName"
+                    className="block font-sans text-sm font-medium text-foreground mb-2"
+                  >
                     Last Name *
                   </label>
                   <input
@@ -172,7 +198,10 @@ const ContactForm = () => {
 
                 {/* Email */}
                 <div>
-                  <label htmlFor="email" className="block font-sans text-sm font-medium text-foreground mb-2">
+                  <label
+                    htmlFor="email"
+                    className="block font-sans text-sm font-medium text-foreground mb-2"
+                  >
                     Email Address *
                   </label>
                   <input
@@ -189,7 +218,10 @@ const ContactForm = () => {
 
                 {/* Phone */}
                 <div>
-                  <label htmlFor="phone" className="block font-sans text-sm font-medium text-foreground mb-2">
+                  <label
+                    htmlFor="phone"
+                    className="block font-sans text-sm font-medium text-foreground mb-2"
+                  >
                     Phone Number
                   </label>
                   <input
@@ -205,7 +237,10 @@ const ContactForm = () => {
 
                 {/* Relation */}
                 <div className="sm:col-span-2">
-                  <label htmlFor="relation" className="block font-sans text-sm font-medium text-foreground mb-2">
+                  <label
+                    htmlFor="relation"
+                    className="block font-sans text-sm font-medium text-foreground mb-2"
+                  >
                     Your Relationship
                   </label>
                   <select
@@ -220,13 +255,18 @@ const ContactForm = () => {
                     <option value="parent">Parent or Grandparent</option>
                     <option value="spouse">Spouse or Partner</option>
                     <option value="other">Other Family Member</option>
-                    <option value="professional">Healthcare Professional</option>
+                    <option value="professional">
+                      Healthcare Professional
+                    </option>
                   </select>
                 </div>
 
                 {/* Message */}
                 <div className="sm:col-span-2">
-                  <label htmlFor="message" className="block font-sans text-sm font-medium text-foreground mb-2">
+                  <label
+                    htmlFor="message"
+                    className="block font-sans text-sm font-medium text-foreground mb-2"
+                  >
                     How Can We Help?
                   </label>
                   <textarea
@@ -248,7 +288,7 @@ const ContactForm = () => {
                 className="btn-primary w-full mt-8 inline-flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
               >
                 {isSubmitting ? (
-                  'Sending...'
+                  "Sending..."
                 ) : (
                   <>
                     Request a Tour

@@ -70,7 +70,7 @@ const Footer = () => {
               <li>Calgary, AB T3L 2P5</li>
               <li>
                 <a
-                  href="tel:+14035550123"
+                  href="tel:+14035897055"
                   className="hover:text-primary-foreground transition-colors"
                 >
                   (403) 555-0123
