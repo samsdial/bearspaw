@@ -1,17 +1,112 @@
-import logo from "@/assets/logo.png";
-import { AnimatePresence, motion } from "framer-motion";
-import { Menu, Phone, X } from "lucide-react";
-import { useState } from "react";
+import { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Menu, X, Phone, ChevronDown, Shield, Brain, Heart, Leaf, Sparkles, Users, Home, TreePine, Activity } from 'lucide-react';
+import { Link } from 'react-router-dom';
+
+const navMenus = [
+  {
+    name: 'Nuestra Filosofía',
+    href: '/seguridad',
+    isRoute: true,
+    submenu: [
+      {
+        title: 'Seguridad',
+        description: 'Protocolos de cuidado las 24 horas del día',
+        href: '/seguridad',
+        isRoute: true,
+        icon: Shield,
+      },
+      {
+        title: 'Naturaleza',
+        description: 'Entornos integrados con jardines terapéuticos',
+        href: '/naturaleza',
+        isRoute: true,
+        icon: TreePine,
+      },
+      {
+        title: 'Legado',
+        description: 'Honramos cada historia de vida con dignidad',
+        href: '/legado',
+        isRoute: true,
+        icon: Heart,
+      },
+    ],
+  },
+  {
+    name: 'Servicios',
+    href: '/assisted-living',
+    isRoute: true,
+    submenu: [
+      {
+        title: 'Assisted Living',
+        description: 'Soporte personalizado manteniendo la independencia',
+        href: '/assisted-living',
+        isRoute: true,
+        icon: Home,
+      },
+      {
+        title: 'Memory Care',
+        description: 'Programas especializados para Alzheimer y demencia',
+        href: '/memory-care',
+        isRoute: true,
+        icon: Brain,
+      },
+      {
+        title: 'Wellness Programs',
+        description: 'Yoga, spa, arte y terapia musical',
+        href: '/wellness-programs',
+        isRoute: true,
+        icon: Activity,
+      },
+      {
+        title: 'Actividades Sociales',
+        description: 'Eventos comunitarios y programas de conexión',
+        href: '/actividades-sociales',
+        isRoute: true,
+        icon: Users,
+      },
+    ],
+  },
+  {
+    name: 'Experiencia',
+    href: '/testimonios',
+    isRoute: true,
+    submenu: [
+      {
+        title: 'Testimonios',
+        description: 'Lo que dicen las familias sobre nosotros',
+        href: '/testimonios',
+        isRoute: true,
+        icon: Sparkles,
+      },
+      {
+        title: 'Vida en Comunidad',
+        description: 'Descubre el día a día en Bearspaw',
+        href: '/vida-en-comunidad',
+        isRoute: true,
+        icon: Leaf,
+      },
+    ],
+  },
+  {
+    name: 'Contacto',
+    href: '/contacto',
+    isRoute: true,
+    submenu: null,
+  },
+];
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
 
-  const navLinks = [
-    { name: "Our Philosophy", href: "#philosophy" },
-    { name: "Services", href: "#services" },
-    { name: "Testimonials", href: "#testimonials" },
-    { name: "Contact", href: "#contact" },
-  ];
+  const handleDropdownEnter = (name: string) => setOpenDropdown(name);
+  const handleDropdownLeave = () => setOpenDropdown(null);
+
+  const toggleMobileSubmenu = (name: string) => {
+    setMobileExpanded(mobileExpanded === name ? null : name);
+  };
 
   return (
     <motion.header
@@ -23,26 +118,88 @@ const Navbar = () => {
       <div className="container-wide">
         <nav className="flex items-center justify-between h-20 md:h-24">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-3">
-            {/* <span className="font-serif text-xl md:text-2xl font-semibold text-foreground">
+          <Link to="/" className="flex items-center gap-3">
+            <span className="font-serif text-xl md:text-2xl font-semibold text-foreground">
               BEARSPAW
             </span>
             <span className="hidden sm:block text-sm text-muted-foreground font-sans">
               Seniors Living
-            </span> */}
-            <img src={logo} alt="Logo" className="h-[45px] md:h-16 lg:h-20" />
-          </a>
+            </span>
+          </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-10">
-            {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                className="font-sans text-base text-muted-foreground hover:text-primary transition-colors duration-200"
+          <div className="hidden lg:flex items-center gap-2">
+            {navMenus.map((menu) => (
+              <div
+                key={menu.name}
+                className="relative"
+                onMouseEnter={() => menu.submenu && handleDropdownEnter(menu.name)}
+                onMouseLeave={handleDropdownLeave}
               >
-                {link.name}
-              </a>
+                {menu.submenu ? (
+                  <span className="flex items-center gap-1.5 px-4 py-2 font-sans text-base text-muted-foreground hover:text-primary transition-colors duration-200 cursor-pointer rounded-lg hover:bg-accent/50">
+                    {menu.name}
+                    <ChevronDown
+                      className={`w-4 h-4 transition-transform duration-200 ${
+                        openDropdown === menu.name ? 'rotate-180' : ''
+                      }`}
+                    />
+                  </span>
+                ) : (
+                  <Link
+                    to={menu.href}
+                    className="flex items-center gap-1.5 px-4 py-2 font-sans text-base text-muted-foreground hover:text-primary transition-colors duration-200 cursor-pointer rounded-lg hover:bg-accent/50"
+                  >
+                    {menu.name}
+                  </Link>
+                )}
+
+                {/* Dropdown */}
+                <AnimatePresence>
+                  {menu.submenu && openDropdown === menu.name && (
+                    <motion.div
+                      initial={{ opacity: 0, y: 8, scale: 0.96 }}
+                      animate={{ opacity: 1, y: 0, scale: 1 }}
+                      exit={{ opacity: 0, y: 8, scale: 0.96 }}
+                      transition={{ duration: 0.2, ease: 'easeOut' }}
+                      className="absolute top-full left-1/2 -translate-x-1/2 pt-3 z-50"
+                    >
+                      <div className="bg-popover border border-border rounded-2xl shadow-elevated p-3 min-w-[320px]">
+                        <div className="space-y-1">
+                          {menu.submenu.map((item) => {
+                            const Icon = item.icon;
+                            const content = (
+                              <div className="flex items-start gap-3 p-3 rounded-xl hover:bg-accent/60 transition-colors duration-200 group cursor-pointer">
+                                <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-accent flex items-center justify-center group-hover:bg-primary/10 transition-colors">
+                                  <Icon className="w-5 h-5 text-primary" />
+                                </div>
+                                <div>
+                                  <span className="font-sans font-medium text-sm text-foreground block">
+                                    {item.title}
+                                  </span>
+                                  <span className="font-sans text-xs text-muted-foreground leading-snug block mt-0.5">
+                                    {item.description}
+                                  </span>
+                                </div>
+                              </div>
+                            );
+
+                            return item.isRoute ? (
+                              <Link key={item.title} to={item.href} onClick={() => setOpenDropdown(null)}>
+                                {content}
+                              </Link>
+                            ) : (
+                              <a key={item.title} href={item.href} onClick={() => setOpenDropdown(null)}>
+                                {content}
+                              </a>
+                            );
+                          })}
+                        </div>
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
             ))}
           </div>
 
@@ -55,9 +212,9 @@ const Navbar = () => {
               <Phone className="w-4 h-4" />
               <span className="font-sans text-sm">(403) 555-0123</span>
             </a>
-            <a href="#contact" className="btn-primary text-base py-3 px-6">
+            <Link to="/contacto" className="btn-primary text-base py-3 px-6">
               Schedule a Tour
-            </a>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -76,30 +233,89 @@ const Navbar = () => {
         {isOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
+            animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="lg:hidden bg-background border-b border-border"
+            className="lg:hidden bg-background border-b border-border overflow-hidden"
           >
-            <div className="container-wide py-6 space-y-4">
-              {navLinks.map((link) => (
-                <a
-                  key={link.name}
-                  href={link.href}
-                  onClick={() => setIsOpen(false)}
-                  className="block font-sans text-lg text-foreground hover:text-primary transition-colors py-2"
-                >
-                  {link.name}
-                </a>
+            <div className="container-wide py-6 space-y-2">
+              {navMenus.map((menu) => (
+                <div key={menu.name}>
+                  {menu.submenu ? (
+                    <>
+                      <button
+                        onClick={() => toggleMobileSubmenu(menu.name)}
+                        className="flex items-center justify-between w-full font-sans text-lg text-foreground hover:text-primary transition-colors py-3 px-2 rounded-lg"
+                      >
+                        {menu.name}
+                        <ChevronDown
+                          className={`w-5 h-5 transition-transform duration-200 ${
+                            mobileExpanded === menu.name ? 'rotate-180' : ''
+                          }`}
+                        />
+                      </button>
+                      <AnimatePresence>
+                        {mobileExpanded === menu.name && (
+                          <motion.div
+                            initial={{ opacity: 0, height: 0 }}
+                            animate={{ opacity: 1, height: 'auto' }}
+                            exit={{ opacity: 0, height: 0 }}
+                            transition={{ duration: 0.2 }}
+                            className="overflow-hidden"
+                          >
+                            <div className="pl-2 pb-2 space-y-1">
+                              {menu.submenu.map((item) => {
+                                const Icon = item.icon;
+                                const content = (
+                                  <div className="flex items-center gap-3 p-3 rounded-xl hover:bg-accent/60 transition-colors">
+                                    <div className="w-9 h-9 rounded-lg bg-accent flex items-center justify-center flex-shrink-0">
+                                      <Icon className="w-4 h-4 text-primary" />
+                                    </div>
+                                    <div>
+                                      <span className="font-sans font-medium text-sm text-foreground block">
+                                        {item.title}
+                                      </span>
+                                      <span className="font-sans text-xs text-muted-foreground block">
+                                        {item.description}
+                                      </span>
+                                    </div>
+                                  </div>
+                                );
+
+                                return item.isRoute ? (
+                                  <Link key={item.title} to={item.href} onClick={() => setIsOpen(false)}>
+                                    {content}
+                                  </Link>
+                                ) : (
+                                  <a key={item.title} href={item.href} onClick={() => setIsOpen(false)}>
+                                    {content}
+                                  </a>
+                                );
+                              })}
+                            </div>
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </>
+                  ) : (
+                    <Link
+                      to={menu.href}
+                      onClick={() => setIsOpen(false)}
+                      className="block font-sans text-lg text-foreground hover:text-primary transition-colors py-3 px-2 rounded-lg"
+                    >
+                      {menu.name}
+                    </Link>
+                  )}
+                </div>
               ))}
               <div className="pt-4 border-t border-border">
-                <a
-                  href="#contact"
+                <Link
+                  to="/contacto"
                   onClick={() => setIsOpen(false)}
                   className="btn-primary block text-center"
                 >
                   Schedule a Tour
-                </a>
+                </Link>
               </div>
             </div>
           </motion.div>

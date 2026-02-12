@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import commonRoom from '@/assets/common-room.jpg';
 import natureTrail from '@/assets/nature-trail.jpg';
 import wellnessRoom from '@/assets/wellness-room.jpg';
@@ -11,13 +12,15 @@ const services = [
       'Personalized support for daily activities while maintaining independence and dignity. Our compassionate team assists with bathing, dressing, medication management, and mobility.',
     features: ['24/7 Care Staff', 'Medication Management', 'Housekeeping & Laundry'],
     image: commonRoom,
+    link: '/assisted-living',
   },
   {
     title: 'Memory Care',
     description:
-      'Specialized programs for residents with Alzheimer\'s and dementia in a secure, calming environment. Evidence-based activities promote cognitive health and emotional wellbeing.',
+      "Specialized programs for residents with Alzheimer's and dementia in a secure, calming environment. Evidence-based activities promote cognitive health and emotional wellbeing.",
     features: ['Secure Environment', 'Cognitive Therapies', 'Family Support Programs'],
     image: natureTrail,
+    link: '/memory-care',
   },
   {
     title: 'Wellness Programs',
@@ -25,6 +28,7 @@ const services = [
       'Holistic wellness offerings including fitness classes, spa treatments, therapeutic gardens, and social activities designed to nurture body, mind, and spirit.',
     features: ['Yoga & Exercise', 'Spa Services', 'Art & Music Therapy'],
     image: wellnessRoom,
+    link: '/wellness-programs',
   },
 ];
 
@@ -97,13 +101,13 @@ const Services = () => {
                 </ul>
 
                 {/* CTA */}
-                <a
-                  href="#contact"
+                <Link
+                  to={service.link}
                   className="inline-flex items-center gap-2 font-sans font-medium text-primary hover:gap-3 transition-all duration-200"
                 >
                   Learn More
                   <ArrowRight className="w-4 h-4" />
-                </a>
+                </Link>
               </div>
             </motion.div>
           ))}

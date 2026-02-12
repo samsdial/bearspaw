@@ -76,7 +76,7 @@ const Footer = () => {
             © {currentYear} Bearspaw Seniors Living. All rights reserved.
           </p>
           <p className="text-primary-foreground/60 font-sans text-sm flex items-center gap-1">
-            Made with <Heart className="w-4 h-4 text-primary fill-primary" /> in Calgary by Idial
+            Made with <Heart className="w-4 h-4 text-primary fill-primary" /> in Calgary
           </p>
         </div>
       </div>
