@@ -1,96 +1,111 @@
-import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Phone, ChevronDown, Shield, Brain, Heart, Leaf, Sparkles, Users, Home, TreePine, Activity } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { AnimatePresence, motion } from "framer-motion";
+import {
+  Activity,
+  Brain,
+  ChevronDown,
+  Heart,
+  Home,
+  Leaf,
+  Menu,
+  Phone,
+  Shield,
+  Sparkles,
+  TreePine,
+  Users,
+  X,
+} from "lucide-react";
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import logo from "../assets/logo.svg";
 
 const navMenus = [
   {
-    name: 'Our Philosophy',
-    href: '/safety',
+    name: "Our Philosophy",
+    href: "/safety",
     isRoute: true,
     submenu: [
       {
-        title: 'Safety',
-        description: '24/7 care and security protocols',
-        href: '/safety',
+        title: "Safety",
+        description: "24/7 care and security protocols",
+        href: "/safety",
         isRoute: true,
         icon: Shield,
       },
       {
-        title: 'Nature',
-        description: 'Healing gardens and nature-integrated spaces',
-        href: '/nature',
+        title: "Nature",
+        description: "Healing gardens and nature-integrated spaces",
+        href: "/nature",
         isRoute: true,
         icon: TreePine,
       },
       {
-        title: 'Legacy',
+        title: "Legacy",
         description: "Honoring each resident's life story with dignity",
-        href: '/legacy',
+        href: "/legacy",
         isRoute: true,
         icon: Heart,
       },
     ],
   },
   {
-    name: 'Services',
-    href: '/assisted-living',
+    name: "Services",
+    href: "/assisted-living",
     isRoute: true,
     submenu: [
       {
-        title: 'Assisted Living',
-        description: 'Personalized support while maintaining independence',
-        href: '/assisted-living',
+        title: "Assisted Living",
+        description: "Personalized support while maintaining independence",
+        href: "/assisted-living",
         isRoute: true,
         icon: Home,
       },
       {
-        title: 'Memory Care',
+        title: "Memory Care",
         description: "Specialized support for Alzheimer's and dementia",
-        href: '/memory-care',
+        href: "/memory-care",
         isRoute: true,
         icon: Brain,
       },
       {
-        title: 'Wellness Programs',
-        description: 'Yoga, spa, art, and music therapy',
-        href: '/wellness-programs',
+        title: "Wellness Programs",
+        description: "Yoga, spa, art, and music therapy",
+        href: "/wellness-programs",
         isRoute: true,
         icon: Activity,
       },
       {
-        title: 'Social Activities',
-        description: 'Community events and meaningful connections',
-        href: '/social-activities',
+        title: "Social Activities",
+        description: "Community events and meaningful connections",
+        href: "/social-activities",
         isRoute: true,
         icon: Users,
       },
     ],
   },
   {
-    name: 'Experience',
-    href: '/testimonials',
+    name: "Experience",
+    href: "/testimonials",
     isRoute: true,
     submenu: [
       {
-        title: 'Testimonials',
-        description: 'What families say about us',
-        href: '/testimonials',
+        title: "Testimonials",
+        description: "What families say about us",
+        href: "/testimonials",
         isRoute: true,
         icon: Sparkles,
       },
       {
-        title: 'Community Life',
-        description: 'Discover everyday life at Bearspaw',
-        href: '/community-life',
+        title: "Community Life",
+        description: "Discover everyday life at Bearspaw",
+        href: "/community-life",
         isRoute: true,
         icon: Leaf,
       },
     ],
   },
   {
-    name: 'Contact',
-    href: '/contact',
+    name: "Contact",
+    href: "/contact",
     isRoute: true,
     submenu: null,
   },
@@ -119,12 +134,13 @@ const Navbar = () => {
         <nav className="flex items-center justify-between h-20 md:h-24">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3">
-            <span className="font-serif text-xl md:text-2xl font-semibold text-foreground">
-              BEARSPAW
-            </span>
-            <span className="hidden sm:block text-sm text-muted-foreground font-sans">
-              Seniors Living
-            </span>
+            <div className="w-32 md:w-48 lg:w-64">
+              <img
+                src={logo}
+                className="w-full h-auto"
+                alt="Bears Paw - Seniors Living"
+              />
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
@@ -133,7 +149,9 @@ const Navbar = () => {
               <div
                 key={menu.name}
                 className="relative"
-                onMouseEnter={() => menu.submenu && handleDropdownEnter(menu.name)}
+                onMouseEnter={() =>
+                  menu.submenu && handleDropdownEnter(menu.name)
+                }
                 onMouseLeave={handleDropdownLeave}
               >
                 {menu.submenu ? (
@@ -141,7 +159,7 @@ const Navbar = () => {
                     {menu.name}
                     <ChevronDown
                       className={`w-4 h-4 transition-transform duration-200 ${
-                        openDropdown === menu.name ? 'rotate-180' : ''
+                        openDropdown === menu.name ? "rotate-180" : ""
                       }`}
                     />
                   </span>
@@ -161,7 +179,7 @@ const Navbar = () => {
                       initial={{ opacity: 0, y: 8, scale: 0.96 }}
                       animate={{ opacity: 1, y: 0, scale: 1 }}
                       exit={{ opacity: 0, y: 8, scale: 0.96 }}
-                      transition={{ duration: 0.2, ease: 'easeOut' }}
+                      transition={{ duration: 0.2, ease: "easeOut" }}
                       className="absolute top-full left-1/2 -translate-x-1/2 pt-3 z-50"
                     >
                       <div className="bg-popover border border-border rounded-2xl shadow-elevated p-3 min-w-[320px]">
@@ -185,11 +203,19 @@ const Navbar = () => {
                             );
 
                             return item.isRoute ? (
-                              <Link key={item.title} to={item.href} onClick={() => setOpenDropdown(null)}>
+                              <Link
+                                key={item.title}
+                                to={item.href}
+                                onClick={() => setOpenDropdown(null)}
+                              >
                                 {content}
                               </Link>
                             ) : (
-                              <a key={item.title} href={item.href} onClick={() => setOpenDropdown(null)}>
+                              <a
+                                key={item.title}
+                                href={item.href}
+                                onClick={() => setOpenDropdown(null)}
+                              >
                                 {content}
                               </a>
                             );
@@ -233,7 +259,7 @@ const Navbar = () => {
         {isOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
+            animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
             className="lg:hidden bg-background border-b border-border overflow-hidden"
@@ -250,7 +276,7 @@ const Navbar = () => {
                         {menu.name}
                         <ChevronDown
                           className={`w-5 h-5 transition-transform duration-200 ${
-                            mobileExpanded === menu.name ? 'rotate-180' : ''
+                            mobileExpanded === menu.name ? "rotate-180" : ""
                           }`}
                         />
                       </button>
@@ -258,7 +284,7 @@ const Navbar = () => {
                         {mobileExpanded === menu.name && (
                           <motion.div
                             initial={{ opacity: 0, height: 0 }}
-                            animate={{ opacity: 1, height: 'auto' }}
+                            animate={{ opacity: 1, height: "auto" }}
                             exit={{ opacity: 0, height: 0 }}
                             transition={{ duration: 0.2 }}
                             className="overflow-hidden"
@@ -283,11 +309,19 @@ const Navbar = () => {
                                 );
 
                                 return item.isRoute ? (
-                                  <Link key={item.title} to={item.href} onClick={() => setIsOpen(false)}>
+                                  <Link
+                                    key={item.title}
+                                    to={item.href}
+                                    onClick={() => setIsOpen(false)}
+                                  >
                                     {content}
                                   </Link>
                                 ) : (
-                                  <a key={item.title} href={item.href} onClick={() => setIsOpen(false)}>
+                                  <a
+                                    key={item.title}
+                                    href={item.href}
+                                    onClick={() => setIsOpen(false)}
+                                  >
                                     {content}
                                   </a>
                                 );

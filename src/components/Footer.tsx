@@ -1,5 +1,4 @@
-import { motion } from 'framer-motion';
-import { Heart } from 'lucide-react';
+import { motion } from "framer-motion";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -18,8 +17,9 @@ const Footer = () => {
           <div className="md:col-span-2 space-y-4">
             <h3 className="font-serif text-2xl font-semibold">BEARSPAW</h3>
             <p className="text-primary-foreground/70 font-sans max-w-md">
-              A boutique senior living community where dignity, nature, and compassionate
-              care come together to create an exceptional quality of life.
+              A boutique senior living community where dignity, nature, and
+              compassionate care come together to create an exceptional quality
+              of life.
             </p>
           </div>
 
@@ -28,22 +28,34 @@ const Footer = () => {
             <h4 className="font-sans font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-3">
               <li>
-                <a href="#philosophy" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors font-sans">
+                <a
+                  href="#philosophy"
+                  className="text-primary-foreground/70 hover:text-primary-foreground transition-colors font-sans"
+                >
                   Our Philosophy
                 </a>
               </li>
               <li>
-                <a href="#services" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors font-sans">
+                <a
+                  href="#services"
+                  className="text-primary-foreground/70 hover:text-primary-foreground transition-colors font-sans"
+                >
                   Services
                 </a>
               </li>
               <li>
-                <a href="#testimonials" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors font-sans">
+                <a
+                  href="#testimonials"
+                  className="text-primary-foreground/70 hover:text-primary-foreground transition-colors font-sans"
+                >
                   Testimonials
                 </a>
               </li>
               <li>
-                <a href="#contact" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors font-sans">
+                <a
+                  href="#contact"
+                  className="text-primary-foreground/70 hover:text-primary-foreground transition-colors font-sans"
+                >
                   Schedule a Tour
                 </a>
               </li>
@@ -57,12 +69,18 @@ const Footer = () => {
               <li>123 Bearspaw Road NW</li>
               <li>Calgary, AB T3L 2P5</li>
               <li>
-                <a href="tel:+14035550123" className="hover:text-primary-foreground transition-colors">
+                <a
+                  href="tel:+14035550123"
+                  className="hover:text-primary-foreground transition-colors"
+                >
                   (403) 555-0123
                 </a>
               </li>
               <li>
-                <a href="mailto:info@bearspawseniors.ca" className="hover:text-primary-foreground transition-colors">
+                <a
+                  href="mailto:info@bearspawseniors.ca"
+                  className="hover:text-primary-foreground transition-colors"
+                >
                   info@bearspawseniors.ca
                 </a>
               </li>
@@ -76,7 +94,8 @@ const Footer = () => {
             © {currentYear} Bearspaw Seniors Living. All rights reserved.
           </p>
           <p className="text-primary-foreground/60 font-sans text-sm flex items-center gap-1">
-            Made with <Heart className="w-4 h-4 text-primary fill-primary" /> in Calgary
+            {/* Made with <Heart className="w-4 h-4 text-primary fill-primary" /> in Calgary */}
+            Made with Love in Calgary bye Fabian Blanco
           </p>
         </div>
       </div>
