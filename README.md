@@ -1,73 +1,83 @@
-# Welcome to your Lovable project
+# Bearspaw - Sitio Web de Senior Living
 
-## Project info
+Aplicacion web para presentar la oferta de `Bearspaw`, una comunidad de `senior living`, con enfoque en:
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+- filosofia de cuidado (Safety, Nature, Legacy),
+- servicios (Assisted Living, Memory Care, Wellness Programs, Social Activities),
+- experiencia de comunidad (Testimonials, Community Life),
+- y contacto para agendar visitas.
 
-## How can I edit this code?
+El proyecto esta construido como SPA con rutas en ingles y redirecciones desde rutas legacy en espanol para mantener compatibilidad.
 
-There are several ways of editing your application.
+## Tecnologias principales
 
-**Use Lovable**
+- `React 18` + `TypeScript`
+- `Vite 5` para desarrollo y build
+- `React Router` para navegacion y rutas
+- `Tailwind CSS` para estilos utilitarios
+- `shadcn/ui` + `Radix UI` para componentes de interfaz
+- `Framer Motion` para animaciones
+- `TanStack Query` para estado asincrono y data fetching
+- `Vitest` + `Testing Library` para pruebas
+- `ESLint` para calidad de codigo
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+## Estructura del proyecto
 
-Changes made via Lovable will be committed automatically to this repo.
+```txt
+src/
+  components/        # Componentes reutilizables y secciones de pagina
+  components/ui/     # Componentes base de UI (shadcn/ui)
+  pages/             # Paginas/rutas de la aplicacion
+  hooks/             # Hooks personalizados
+  lib/               # Utilidades compartidas
+  test/              # Configuracion y pruebas
+```
 
-**Use your preferred IDE**
+## Rutas principales
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- `/`
+- `/safety`
+- `/nature`
+- `/legacy`
+- `/assisted-living`
+- `/memory-care`
+- `/wellness-programs`
+- `/social-activities`
+- `/testimonials`
+- `/community-life`
+- `/contact`
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+Tambien existen redirecciones desde rutas en espanol, por ejemplo:
+`/seguridad`, `/naturaleza`, `/legado`, `/testimonios`, `/vida-en-comunidad`, `/contacto`.
 
-Follow these steps:
+## Requisitos
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+- `Node.js` 18 o superior
+- `npm` (incluido normalmente con Node.js)
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## Instalacion y ejecucion local
 
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+```bash
+git clone <tu-repositorio>
+cd bearspaw
+npm install
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+La app quedara disponible en `http://localhost:5173`.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Scripts disponibles
 
-**Use GitHub Codespaces**
+- `npm run dev`: inicia entorno de desarrollo
+- `npm run build`: build de produccion
+- `npm run build:dev`: build en modo development
+- `npm run preview`: previsualiza el build local
+- `npm run lint`: ejecuta linting con ESLint
+- `npm run test`: ejecuta pruebas una vez
+- `npm run test:watch`: ejecuta pruebas en modo watch
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Notas de mantenimiento
 
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+- La navegacion principal se gestiona en `src/components/Navbar.tsx`.
+- Las rutas de la app se definen en `src/App.tsx`.
+- La composicion de la home se encuentra en `src/pages/Index.tsx`.
