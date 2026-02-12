@@ -95,7 +95,7 @@ const Footer = () => {
           </p>
           <p className="text-primary-foreground/60 font-sans text-sm flex items-center gap-1">
             {/* Made with <Heart className="w-4 h-4 text-primary fill-primary" /> in Calgary */}
-            Made with Love in Calgary bye Fabian Blanco
+            Made with Love in Calgary by Fabian Blanco
           </p>
         </div>
       </div>
