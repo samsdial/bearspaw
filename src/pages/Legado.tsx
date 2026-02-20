@@ -1,4 +1,4 @@
-import wellnessRoom from "@/assets/wellness-room.jpg";
+import wellnessRoom from "@/assets/assisted-living-03.jpg";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import { motion } from "framer-motion";

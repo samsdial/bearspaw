@@ -1,4 +1,4 @@
-import natureTrail from "@/assets/nature-trail.jpg";
+import natureTrail from "@/assets/hero-garden-02.jpg";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import { motion } from "framer-motion";

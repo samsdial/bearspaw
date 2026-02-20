@@ -1,34 +1,42 @@
-import { motion } from 'framer-motion';
-import { ArrowRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import commonRoom from '@/assets/common-room.jpg';
-import natureTrail from '@/assets/nature-trail.jpg';
-import wellnessRoom from '@/assets/wellness-room.jpg';
+import commonRoom from "@/assets/assisted-living.jpeg";
+import wellnessRoom from "@/assets/common-room-02.jpg";
+import natureTrail from "@/assets/hero-garden-02.jpg";
+import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const services = [
   {
-    title: 'Assisted Living',
+    title: "Assisted Living",
     description:
-      'Personalized support for daily activities while maintaining independence and dignity. Our compassionate team assists with bathing, dressing, medication management, and mobility.',
-    features: ['24/7 Care Staff', 'Medication Management', 'Housekeeping & Laundry'],
+      "Personalized support for daily activities while maintaining independence and dignity. Our compassionate team assists with bathing, dressing, medication management, and mobility.",
+    features: [
+      "24/7 Care Staff",
+      "Medication Management",
+      "Housekeeping & Laundry",
+    ],
     image: commonRoom,
-    link: '/assisted-living',
+    link: "/assisted-living",
   },
   {
-    title: 'Memory Care',
+    title: "Memory Care",
     description:
       "Specialized programs for residents with Alzheimer's and dementia in a secure, calming environment. Evidence-based activities promote cognitive health and emotional wellbeing.",
-    features: ['Secure Environment', 'Cognitive Therapies', 'Family Support Programs'],
+    features: [
+      "Secure Environment",
+      "Cognitive Therapies",
+      "Family Support Programs",
+    ],
     image: natureTrail,
-    link: '/memory-care',
+    link: "/memory-care",
   },
   {
-    title: 'Wellness Programs',
+    title: "Wellness Programs",
     description:
-      'Holistic wellness offerings including fitness classes, spa treatments, therapeutic gardens, and social activities designed to nurture body, mind, and spirit.',
-    features: ['Yoga & Exercise', 'Spa Services', 'Art & Music Therapy'],
+      "Holistic wellness offerings including fitness classes, spa treatments, therapeutic gardens, and social activities designed to nurture body, mind, and spirit.",
+    features: ["Yoga & Exercise", "Spa Services", "Art & Music Therapy"],
     image: wellnessRoom,
-    link: '/wellness-programs',
+    link: "/wellness-programs",
   },
 ];
 
@@ -40,7 +48,7 @@ const Services = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-100px' }}
+          viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
           className="text-center max-w-2xl mx-auto mb-16"
         >
@@ -48,7 +56,7 @@ const Services = () => {
             Our Services
           </span>
           <h2 className="heading-lg mt-4 mb-6">
-            Comprehensive Care for{' '}
+            Comprehensive Care for{" "}
             <span className="text-primary">Every Need</span>
           </h2>
           <p className="body-lg">
@@ -64,7 +72,7 @@ const Services = () => {
               key={service.title}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-100px' }}
+              viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6, delay: index * 0.15 }}
               className="bg-background rounded-[20px] overflow-hidden shadow-card group hover:shadow-elevated transition-all duration-300"
             >

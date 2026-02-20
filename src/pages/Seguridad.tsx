@@ -1,4 +1,4 @@
-import commonRoom from "@/assets/common-room.jpg";
+import commonRoom from "@/assets/common-room-03.jpg";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import { motion } from "framer-motion";

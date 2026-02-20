@@ -54,7 +54,7 @@ const ContactForm = () => {
     <section id="contact" className="section-padding bg-card">
       <div className="container-wide">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
-          {/* Left Content */}
+          {/* Left Content descomentar */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}

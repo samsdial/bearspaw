@@ -1,7 +1,7 @@
-import commonRoom from "@/assets/common-room.jpg";
-import heroGarden from "@/assets/hero-garden.jpg";
-import natureTrail from "@/assets/nature-trail.jpg";
-import wellnessRoom from "@/assets/wellness-room.jpg";
+import wellnessRoom from "@/assets/assisted-living.jpeg";
+import commonRoom from "@/assets/common-room-03.jpg";
+import heroGarden from "@/assets/hero-garden-02.jpg";
+import natureTrail from "@/assets/hero-garden-03.jpg";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import { motion } from "framer-motion";

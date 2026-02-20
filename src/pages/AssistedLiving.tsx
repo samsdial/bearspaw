@@ -1,5 +1,5 @@
-import commonRoom from "@/assets/common-room.jpg";
-import wellnessRoom from "@/assets/wellness-room.jpg";
+import commonRoom from "@/assets/assisted-living-01.jpg";
+import wellnessRoom from "@/assets/assisted-living.jpeg";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import { motion } from "framer-motion";
