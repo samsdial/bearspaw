@@ -1,4 +1,4 @@
-import natureTrail from "@/assets/hero-garden-02.jpg";
+import natureTrail from "@/assets/assisted-living-06.jpg";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import { motion } from "framer-motion";
@@ -272,8 +272,8 @@ const MemoryCare = () => {
               support your loved one deserves.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="tel:+14035897055" className="btn-primary">
-                Call (403) 555-0123
+              <a href="tel:+14033717664" className="btn-primary">
+                Call (403) 371-7664
               </a>
               <Link to="/#contact" className="btn-secondary">
                 Send an Inquiry

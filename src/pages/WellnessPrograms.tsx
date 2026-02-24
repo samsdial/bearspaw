@@ -1,5 +1,5 @@
-import wellnessRoom from "@/assets/common-room-03.jpg";
-import natureTrail from "@/assets/hero-garden-03.jpg";
+import natureTrail from "@/assets/weekly-schedule.jpg";
+import wellnessRoom from "@/assets/wellness-programs.jpg";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import { motion } from "framer-motion";
@@ -104,7 +104,7 @@ const WellnessPrograms = () => {
               <img
                 src={wellnessRoom}
                 alt="Wellness space at Bearspaw"
-                className="w-full h-[400px] lg:h-[500px] object-cover"
+                className="w-full h-[400px] object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-foreground/20 to-transparent" />
             </motion.div>

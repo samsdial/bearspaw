@@ -235,8 +235,8 @@ const CommunityLife = () => {
               community special.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="tel:+14035897055" className="btn-primary">
-                Call (403) 555-0123
+              <a href="tel:+14033717664" className="btn-primary">
+                Call (403) 371-7664
               </a>
               <Link to="/contact" className="btn-secondary">
                 Request a Visit

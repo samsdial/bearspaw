@@ -1,4 +1,4 @@
-import commonRoom from "@/assets/assisted-living-01.jpg";
+import commonRoom from "@/assets/assisted-living-05.jpg";
 import wellnessRoom from "@/assets/assisted-living.jpeg";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
@@ -227,8 +227,8 @@ const AssistedLiving = () => {
               Bearspaw with the care of their loved ones.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="tel:+14035897055" className="btn-primary">
-                Call (403) 555-0123
+              <a href="tel:+14033717664" className="btn-primary">
+                Call (403) 371-7664
               </a>
               <Link to="/contact" className="btn-secondary">
                 Send Inquiry

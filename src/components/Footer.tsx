@@ -66,14 +66,14 @@ const Footer = () => {
           <div>
             <h4 className="font-sans font-semibold mb-4">Contact</h4>
             <ul className="space-y-3 text-primary-foreground/70 font-sans">
-              <li>123 Bearspaw Road NW</li>
-              <li>Calgary, AB T3L 2P5</li>
+              <li>30095 Township Road 254a</li>
+              <li>Calgary, Alberta T3L 2P9, Canada</li>
               <li>
                 <a
-                  href="tel:+14035897055"
+                  href="tel:+14033717664"
                   className="hover:text-primary-foreground transition-colors"
                 >
-                  (403) 555-0123
+                  (403) 371-7664
                 </a>
               </li>
               <li>

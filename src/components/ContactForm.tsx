@@ -87,10 +87,10 @@ const ContactForm = () => {
                     Phone
                   </p>
                   <a
-                    href="tel:+14035897055"
+                    href="tel:+14033717664"
                     className="font-sans text-muted-foreground hover:text-primary transition-colors"
                   >
-                    (403) 555-0123
+                    (403) 371-7664
                   </a>
                 </div>
               </div>
@@ -121,9 +121,9 @@ const ContactForm = () => {
                     Location
                   </p>
                   <p className="font-sans text-muted-foreground">
-                    123 Bearspaw Road NW
+                    30095 Township Road 254a,
                     <br />
-                    Calgary, AB T3L 2P5
+                    Calgary, Alberta T3L 2P9, Canada
                   </p>
                 </div>
               </div>
@@ -133,7 +133,7 @@ const ContactForm = () => {
             <div className="rounded-[20px] overflow-hidden shadow-card mt-2">
               <iframe
                 title="Bearspaw Seniors Living Location"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2503.5!2d-114.2!3d51.12!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTHCsDA3JzEyLjAiTiAxMTTCsDEyJzAwLjAiVw!5e0!3m2!1sen!2sca!4v1700000000000"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2502.140244568927!2d-114.2903166448346!3d51.16120382077327!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x537169f0e53f5ca9%3A0xc58d4a6f3705cd75!2s30095%20Township%20Rd%20254A%2C%20Calgary%2C%20AB%20T3R%200K3%2C%20Canad%C3%A1!5e0!3m2!1ses!2sco!4v1771959690324!5m2!1ses!2sco"
                 width="100%"
                 height="220"
                 style={{ border: 0 }}
@@ -231,7 +231,7 @@ const ContactForm = () => {
                     value={formData.phone}
                     onChange={handleChange}
                     className="input-field"
-                    placeholder="(403) 555-0123"
+                    placeholder="(403) 371-7664"
                   />
                 </div>
 

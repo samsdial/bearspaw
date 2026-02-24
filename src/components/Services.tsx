@@ -1,6 +1,6 @@
 import commonRoom from "@/assets/assisted-living.jpeg";
-import wellnessRoom from "@/assets/common-room-02.jpg";
-import natureTrail from "@/assets/hero-garden-02.jpg";
+import natureTrail from "@/assets/memory-care.jpeg";
+import wellnessRoom from "@/assets/wellness-program.jpeg";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";

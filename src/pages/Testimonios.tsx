@@ -1,4 +1,4 @@
-import heroGarden from "@/assets/hero-garden-01.jpg";
+import heroGarden from "@/assets/hero-garden-02.jpg";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import { motion } from "framer-motion";
