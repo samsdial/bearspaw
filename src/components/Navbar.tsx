@@ -123,6 +123,13 @@ const Navbar = () => {
     setMobileExpanded(mobileExpanded === name ? null : name);
   };
 
+  const handleMenuClick = () => {
+    setOpenDropdown(null);
+    setIsOpen(false);
+    setMobileExpanded(null);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <motion.header
       initial={{ opacity: 0, y: -20 }}
@@ -133,7 +140,7 @@ const Navbar = () => {
       <div className="container-wide">
         <nav className="flex items-center justify-between h-20 md:h-24">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-3">
+          <Link to="/" onClick={handleMenuClick} className="flex items-center gap-3">
             <div className="w-40 md:w-48 lg:w-64">
               <img
                 src={logo}
@@ -166,6 +173,7 @@ const Navbar = () => {
                 ) : (
                   <Link
                     to={menu.href}
+                    onClick={handleMenuClick}
                     className="flex items-center gap-1.5 px-4 py-2 font-sans text-base text-muted-foreground hover:text-primary transition-colors duration-200 cursor-pointer rounded-lg hover:bg-accent/50"
                   >
                     {menu.name}
@@ -206,7 +214,7 @@ const Navbar = () => {
                               <Link
                                 key={item.title}
                                 to={item.href}
-                                onClick={() => setOpenDropdown(null)}
+                                onClick={handleMenuClick}
                               >
                                 {content}
                               </Link>
@@ -312,7 +320,7 @@ const Navbar = () => {
                                   <Link
                                     key={item.title}
                                     to={item.href}
-                                    onClick={() => setIsOpen(false)}
+                                    onClick={handleMenuClick}
                                   >
                                     {content}
                                   </Link>
@@ -334,7 +342,7 @@ const Navbar = () => {
                   ) : (
                     <Link
                       to={menu.href}
-                      onClick={() => setIsOpen(false)}
+                      onClick={handleMenuClick}
                       className="block font-sans text-lg text-foreground hover:text-primary transition-colors py-3 px-2 rounded-lg"
                     >
                       {menu.name}
@@ -345,7 +353,7 @@ const Navbar = () => {
               <div className="pt-4 border-t border-border">
                 <Link
                   to="/contact"
-                  onClick={() => setIsOpen(false)}
+                  onClick={handleMenuClick}
                   className="btn-primary block text-center"
                 >
                   Schedule a Tour
